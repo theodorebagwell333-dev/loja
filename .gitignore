@@ -1,0 +1,16 @@
+# dependências
+node_modules/
+
+# next / vercel
+.next/
+out/
+.vercel/
+
+# segredos — NUNCA suba para o Git
+.env
+.env.local
+.env.*.local
+fotos/
+.DS_Store
+npm-debug.log*
+*.tsbuildinfo

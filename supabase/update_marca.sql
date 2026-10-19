@@ -1,0 +1,2 @@
+-- Se você JÁ rodou o schema antigo, rode só isto para aplicar a marca VARIABLE:
+update settings set data = data || '{"store_name":"VARIABLE","logo_text":"VARIABLE","tagline":"each expression has its own value","logo_url":"","hero_title":"Cada expressão tem o seu valor.","hero_subtitle":"Básicos em preto, cinza e off white, com corte e acabamento.","hero_cta":"Ver a coleção","accent":"#bdb9b0","footer_text":"© 2026 VARIABLE. Todos os direitos reservados."}'::jsonb where id=1;

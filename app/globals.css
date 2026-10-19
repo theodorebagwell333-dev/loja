@@ -1,0 +1,158 @@
+:root{--bg:#f3f1ec;--ink:#0d0d0d;--mut:#7a746a;--ln:#d9d5cb;--pn:#e7e3db}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-b),sans-serif;font-size:14px;line-height:1.55}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+h1,h2{font-family:var(--f-h),Georgia,serif;font-weight:500;line-height:1.02}
+:focus-visible{outline:2px solid #000;outline-offset:3px}
+
+/* ── topo ── */
+.ann{background:var(--ink);color:#bdb9b0;text-align:center;padding:9px;font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+.hd{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:20px 32px;border-bottom:1px solid var(--ln);position:sticky;top:0;background:var(--bg);z-index:5}
+.hl{display:flex}
+.hd nav{display:flex;gap:28px;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+.hd nav a:hover{border-bottom:1px solid var(--ink)}
+.logo{display:inline-flex;align-items:center;gap:10px}
+.logo b{font-weight:500;letter-spacing:.3em;font-size:17px}
+.lm{width:28px}
+.logoimg{height:34px}
+.bag,.burger{background:none;border:0;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+.bag{justify-self:end;border-bottom:1px solid var(--ink)}
+.burger{display:none}
+.btn{display:inline-block;background:var(--ink);color:var(--bg);padding:16px 38px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;border:1px solid var(--ink);text-align:center}
+.btn:hover{opacity:.85}
+.btn.ghost{background:none;color:var(--ink);margin-top:32px}
+.btn:disabled{opacity:.6}
+
+/* ── home ── */
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:80vh;border-bottom:1px solid var(--ln)}
+.ht{display:flex;flex-direction:column;justify-content:center;gap:26px;padding:64px 48px}
+.ht h1{font-size:clamp(46px,6.6vw,108px);letter-spacing:-.01em}
+.ht p{max-width:34ch;color:var(--mut);font-size:15px}
+.hp{background:var(--pn);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.hp .garment{width:46%;filter:drop-shadow(0 24px 22px rgba(0,0,0,.14))}
+.hp .garment+.garment{margin-left:-9%;margin-top:16%}
+.hp .hmark{width:34%}
+.hp .himg{position:relative;width:44%;aspect-ratio:4/5;box-shadow:0 24px 40px rgba(0,0,0,.18)}
+.hp .himg+.himg{margin-left:-6%;margin-top:16%}
+.sec{padding:80px 32px}
+.sec h2,.shop h2{font-size:42px;margin-bottom:26px}
+.sh{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.sh a{font-size:11px;letter-spacing:.14em;text-transform:uppercase;border-bottom:1px solid var(--ink)}
+.tabs{display:flex;gap:30px;margin-bottom:28px;border-bottom:1px solid var(--ln);overflow-x:auto}
+.tabs button{background:none;border:0;padding:0 0 12px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);white-space:nowrap}
+.tabs .on{color:var(--ink);border-bottom:1px solid var(--ink);margin-bottom:-1px}
+.man{background:var(--ink);color:var(--bg);text-align:center;padding:120px 32px}
+.man .mm{width:64px;margin-bottom:26px}
+.man h2{font-size:clamp(34px,5vw,72px);font-style:italic;max-width:18ch;margin:0 auto}
+
+/* ── cards e grade ── */
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:36px 22px}
+.grid.g3{grid-template-columns:repeat(3,1fr);margin-top:24px}
+.card{display:block;min-width:0}
+.card .ph{background:var(--pn);aspect-ratio:4/5;display:grid;place-items:center;position:relative;overflow:hidden}
+.card .garment{width:74%;transition:transform .3s}
+.card:hover .garment{transform:scale(1.04)}
+.card i{position:absolute;top:12px;left:12px;z-index:2;font-style:normal;font-size:10px;letter-spacing:.14em;text-transform:uppercase;background:var(--bg);padding:4px 9px}
+.card h3{font-size:13px;font-weight:500;margin:14px 0 2px}
+.card span{color:var(--mut);font-size:13px}
+.card .b{position:absolute;inset:0;opacity:0;transition:opacity .3s}
+.card:hover .b{opacity:1}
+.card .soonv{position:absolute;inset:0;z-index:1;background:rgba(13,13,13,.26)}
+.card .soonc,.ph .soonc{position:absolute;z-index:2;left:50%;top:50%;transform:translate(-50%,-50%);color:#fff;border:1px solid rgba(255,255,255,.75);padding:9px 18px;font-size:10px;letter-spacing:.32em;text-transform:uppercase;white-space:nowrap;backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
+
+/* ── foto inteligente (ocupa o quadro do pai; o pai define a proporção) ── */
+.ph>.pho,.himg>.pho,.th button>.pho{position:absolute;inset:0}
+.pho{position:relative;width:100%;height:100%;overflow:hidden;background:var(--pn)}
+.pho .im{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 35%}
+.pho.contain .im{object-fit:contain;object-position:center}
+.pho .bg{position:absolute;inset:-10%;width:120%;height:120%;object-fit:cover;filter:blur(28px) saturate(1.1);opacity:.6}
+
+/* ── "Em breve" ── */
+.soon{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);align-items:center;gap:clamp(24px,5vw,72px);background:var(--pn);border:1px solid var(--ln);padding:clamp(28px,5vw,64px);position:relative;overflow:hidden}
+.soon::before{content:'';position:absolute;right:-8%;top:-30%;width:460px;aspect-ratio:1;border-radius:50%;background:radial-gradient(closest-side,rgba(255,255,255,.6),transparent)}
+.soon>*{position:relative}
+.soon-art{position:relative;display:grid;place-items:center;aspect-ratio:1;width:100%;max-width:340px;justify-self:center}
+.soon-art .garment{width:60%;position:relative;z-index:1;animation:breathe 5s ease-in-out infinite;filter:drop-shadow(0 18px 18px rgba(0,0,0,.08))}
+.soon-art .ring{position:absolute;inset:0;border:1px solid #cdc8bb;border-radius:50%;opacity:0;animation:ping 6s ease-out infinite}
+.soon-art .ring:nth-child(2){animation-delay:2s}.soon-art .ring:nth-child(3){animation-delay:4s}
+.soon-eye{display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--mut)}
+.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--ink);animation:blink 1.8s ease-in-out infinite}
+.soon h2{font-size:clamp(60px,9vw,132px);font-style:italic;font-weight:400;line-height:.9;margin:16px 0 14px}
+.soon p{max-width:40ch;color:var(--mut);font-size:15px}
+.soon-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.soon-actions .btn.ghost{margin-top:0}
+.soon.sm{padding:clamp(22px,3.5vw,40px);gap:clamp(20px,3vw,40px)}
+.soon.sm .soon-art{max-width:200px}
+.soon.sm h2{font-size:clamp(44px,6vw,76px);margin:12px 0 8px}
+.soonbox{border:1px solid var(--ln);background:var(--pn);padding:26px;display:grid;gap:12px;justify-items:start}
+.soonbox>b{font-family:var(--f-h),serif;font-style:italic;font-weight:400;font-size:52px;line-height:1}
+.soonbox p{color:var(--mut)}
+@keyframes ping{0%{transform:scale(.4);opacity:.9}100%{transform:scale(1.04);opacity:0}}
+@keyframes breathe{50%{transform:translateY(-8px)}}
+@keyframes blink{50%{opacity:.25}}
+@media(prefers-reduced-motion:reduce){.soon *,.soonbox *{animation:none!important}}
+
+/* ── categorias ── */
+.cl a{display:flex;justify-content:space-between;align-items:baseline;padding:24px 0;border-top:1px solid var(--ln);font-family:var(--f-h),serif;font-size:38px}
+.cl a:last-child{border-bottom:1px solid var(--ln)}
+.cl a:hover{padding-left:14px}
+.cl small{font-family:var(--f-b);font-size:12px;color:var(--mut)}
+.cl a,.cl small{transition:padding .2s}
+.cl .pill{border:1px solid var(--ln);padding:4px 12px;font-size:10px;letter-spacing:.22em;text-transform:uppercase}
+.shop{display:grid;grid-template-columns:200px 1fr;gap:48px;padding:48px 32px}
+.shop aside{display:flex;flex-direction:column;gap:9px;align-self:start;position:sticky;top:90px}
+.shop aside b{font-size:11px;letter-spacing:.16em;text-transform:uppercase;margin:14px 0 4px}
+.shop aside b:first-child{margin-top:0}
+.shop aside a{color:var(--mut)}
+.shop aside .on{color:var(--ink);text-decoration:underline;text-underline-offset:5px}
+.shop aside em{display:inline-block;text-decoration:none;font-style:normal;font-size:9px;letter-spacing:.18em;text-transform:uppercase;border:1px solid var(--ln);padding:2px 7px;margin-left:8px;vertical-align:2px}
+footer{border-top:1px solid var(--ln);padding:48px 32px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;color:var(--mut)}
+footer b{color:var(--ink);letter-spacing:.2em}
+footer a{margin-left:18px;border-bottom:1px solid var(--ln)}
+
+/* ── produto ── */
+.pd{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:64px;padding:48px 32px;align-items:start}
+.pd .gal{position:sticky;top:90px}
+.pd .ph{position:relative;background:var(--pn);display:grid;place-items:center;aspect-ratio:4/5;width:min(100%,calc((100vh - 140px) * .8));margin:0 auto;overflow:hidden}
+.pd .garment{width:78%}
+.pd h1{font-size:48px;margin-bottom:8px}
+.pd .pr{font-size:18px;margin:6px 0 22px}
+.sz{display:flex;gap:8px;margin:12px 0 24px;flex-wrap:wrap}
+.sz button{min-width:54px;padding:12px;border:1px solid var(--ink);background:none}
+.sz .on{background:var(--ink);color:var(--bg)}
+.sz button:disabled{opacity:.3;text-decoration:line-through}
+.gal .th{display:flex;gap:10px;margin-top:10px;justify-content:center;flex-wrap:wrap}
+.gal .th button{position:relative;width:72px;aspect-ratio:4/5;padding:0;border:1px solid var(--ln);background:var(--pn);opacity:.6;overflow:hidden}
+.gal .th .on{opacity:1;border-color:var(--ink)}
+.bk{padding:24px 32px 0}
+.back{background:none;border:0;border-bottom:1px solid var(--ink);padding:0 0 2px;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+
+/* ── sacola ── */
+.mut{color:var(--mut)}
+.veil{position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:9}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(420px,100%);background:var(--bg);z-index:10;padding:26px;transform:translateX(100%);transition:transform .25s;overflow:auto;display:flex;flex-direction:column;gap:16px}
+.drawer.on{transform:none}
+.row{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.row button{background:none;border:0;text-decoration:underline}
+.line{display:grid;grid-template-columns:1fr auto auto;gap:14px;align-items:center;border-bottom:1px solid var(--ln);padding-bottom:12px}
+.qty button{width:26px;background:none;border:1px solid var(--ln)}
+.tot{font-size:18px;padding-top:12px}
+
+/* ── responsivo ── */
+@media(max-width:1100px){.grid{grid-template-columns:repeat(3,1fr)}.grid.g3{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:860px){
+  .hero,.pd,.shop,.soon{grid-template-columns:1fr}
+  .hero{min-height:0}.ht{padding:44px 24px}.hp{padding:40px 0}
+  .grid,.grid.g3{grid-template-columns:repeat(2,1fr);gap:28px 14px}
+  .hd{padding:16px 20px;grid-template-columns:auto 1fr auto}.hd>a{justify-self:center}
+  .burger{display:block}
+  .hd nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg);flex-direction:column;padding:20px;border-bottom:1px solid var(--ln)}
+  .hd nav.open{display:flex}
+  .shop{padding:32px 20px;gap:28px}.shop aside{position:static;flex-direction:row;flex-wrap:wrap;gap:8px 18px}
+  .sec{padding:56px 20px}.cl a{font-size:28px}
+  .pd{padding:32px 20px;gap:32px}.pd .gal{position:static}.pd h1{font-size:38px}.bk{padding:20px 20px 0}
+  .soon{text-align:center;justify-items:center}.soon p{margin:auto}.soon-actions{justify-content:center}.soon-art{max-width:220px}
+  .soonbox{justify-items:stretch}.soonbox .btn{text-align:center}
+}
