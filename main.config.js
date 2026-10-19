@@ -31,18 +31,22 @@ export const MAIN = {
   // estoque  → quantidade inicial sugerida por tamanho
   // ativa    → false esconde a categoria do site e do admin
   categorias: [
-    { id: 'camiseta', nome: 'Camisetas', forma: 'camiseta', tamanhos: ['P', 'M', 'G', 'GG'], estoque: 10 },
-    { id: 'regata', nome: 'Regatas', forma: 'regata', tamanhos: ['P', 'M', 'G', 'GG'], estoque: 10 },
-    { id: 'manga_longa', nome: 'Mangas longas', forma: 'manga_longa', tamanhos: ['P', 'M', 'G', 'GG'], estoque: 10 },
-    { id: 'blusa', nome: 'Blusas', forma: 'blusa', tamanhos: ['P', 'M', 'G', 'GG'], estoque: 10 },
-    { id: 'jaqueta', nome: 'Jaquetas', forma: 'jaqueta', tamanhos: ['P', 'M', 'G', 'GG'], estoque: 10 },
-    { id: 'shorts', nome: 'Shorts', forma: 'shorts', tamanhos: ['P', 'M', 'G', 'GG'], estoque: 10 },
-    { id: 'calca', nome: 'Calças', forma: 'calca', tamanhos: ['P', 'M', 'G', 'GG'], estoque: 10 },
+    { id: 'camiseta', nome: 'Camisetas', forma: 'camiseta', tamanhos: ['PP', 'P', 'M', 'G', 'GG'], estoque: 10 },
+    { id: 'regata', nome: 'Regatas', forma: 'regata', tamanhos: ['PP', 'P', 'M', 'G', 'GG'], estoque: 10 },
+    { id: 'manga_longa', nome: 'Mangas longas', forma: 'manga_longa', tamanhos: ['PP', 'P', 'M', 'G', 'GG'], estoque: 10 },
+    { id: 'blusa', nome: 'Blusas', forma: 'blusa', tamanhos: ['PP', 'P', 'M', 'G', 'GG'], estoque: 10 },
+    { id: 'jaqueta', nome: 'Jaquetas', forma: 'jaqueta', tamanhos: ['PP', 'P', 'M', 'G', 'GG'], estoque: 10 },
+    { id: 'shorts', nome: 'Shorts', forma: 'shorts', tamanhos: ['PP', 'P', 'M', 'G', 'GG'], estoque: 10 },
+    { id: 'calca', nome: 'Calças', forma: 'calca', tamanhos: ['PP', 'P', 'M', 'G', 'GG'], estoque: 10 },
     { id: 'bone', nome: 'Bonés', forma: 'bone', tamanhos: ['Único'], estoque: 15 },
     { id: 'bolsa', nome: 'Bolsas', forma: 'bolsa', tamanhos: ['Único'], estoque: 15 },
     // Exemplo para criar uma categoria nova (tire as barras):
     // { id: 'meia', nome: 'Meias', forma: 'camiseta', tamanhos: ['Único'], estoque: 20 },
   ],
+
+  // Ordem em que os tamanhos aparecem na loja e no admin (menor → maior).
+  // Tamanho que não estiver aqui (ex.: 38, 40) vai para o fim, em ordem numérica.
+  ordemTamanhos: ['PP', 'P', 'M', 'G', 'GG', 'XG', 'Único'],
 
   // Categorias que ganham link fixo no menu do topo (além de "Loja" e das coleções).
   menu: ['bone'],
