@@ -1,3 +1,4 @@
+import { MARK_PATH } from './Logo';
 import { shapeOf } from '@/lib/util';
 const P = {
   camiseta: 'M60 20 L85 12 Q100 28 115 12 L140 20 L180 55 L160 80 L142 68 L142 205 L58 205 L58 68 L40 80 L20 55 Z',
@@ -31,7 +32,7 @@ const lum = h => { const n = parseInt((h || '#000').slice(1), 16); return (0.299
 // Peça escura -> logo cinza; peça clara -> logo preta
 export const logoColor = c => (lum(c) < 0.45 ? '#9b9b9e' : '#0d0d0d');
 const Mk = ({ x, y, w, c }) => (
-  <svg x={x - w / 2} y={y} width={w} height={w * 0.9} viewBox="0 0 100 90"><g fill={c}><path d="M2 3H31L49 56Q51 62 55 56L63 42L71 48L57 74Q49 85 41 74Z" /><path d="M98 3Q79 4 73 15L58 44L65 47Q82 36 98 3Z" /></g></svg>
+  <svg x={x - w / 2} y={y} width={w} height={w * 0.9} viewBox="0 0 100 90"><path fill={c} d={MARK_PATH} /></svg>
 );
 export default function Garment({ type = 'camiseta', color = '#0d0d0d', logo = 'VARIABLE', print = 'chest', tagline = 'each expression has its own value' }) {
   type = P[shapeOf(type)] ? shapeOf(type) : 'camiseta';

@@ -8,7 +8,7 @@ import { Card, Field, Page, useUi } from './ui';
 const GRUPOS = [
   ['Marca', 'Nome, logo e cor da loja.', [
     ['store_name', 'Nome da loja'], ['logo_text', 'Texto da logo', 'Também vai estampado nas peças sem foto.'], ['tagline', 'Slogan', null, true],
-    ['logo_url', 'Logo oficial (link da imagem)', 'Opcional. Se preencher, substitui o desenho da logo.', true], ['accent', 'Cor de destaque', null, 'color'],
+    ['logo_url', 'Logo oficial (link da imagem)', 'Deixe VAZIO para usar a logo oficial do site (recomendado). Só preencha para trocar por outra imagem.', true], ['accent', 'Cor de destaque', null, 'color'],
   ]],
   ['Página inicial', 'O que aparece no topo da loja.', [
     ['announcement', 'Faixa de aviso (topo da página)', 'Deixe vazio para esconder.', true], ['hero_title', 'Título principal', null, true], ['hero_subtitle', 'Subtítulo', null, true], ['hero_cta', 'Texto do botão'],

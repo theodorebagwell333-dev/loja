@@ -40,8 +40,10 @@ export const MAIN = {
     { id: 'calca', nome: 'Calças', forma: 'calca', tamanhos: ['PP', 'P', 'M', 'G', 'GG'], estoque: 10 },
     { id: 'bone', nome: 'Bonés', forma: 'bone', tamanhos: ['Único'], estoque: 15 },
     { id: 'bolsa', nome: 'Bolsas', forma: 'bolsa', tamanhos: ['Único'], estoque: 15 },
-    // Exemplo para criar uma categoria nova (tire as barras):
-    // { id: 'meia', nome: 'Meias', forma: 'camiseta', tamanhos: ['Único'], estoque: 20 },
+    { id: 'cueca', nome: 'Cuecas', forma: 'shorts', tamanhos: ['PP', 'P', 'M', 'G', 'GG'], estoque: 10 },
+    { id: 'meia', nome: 'Meias', forma: 'camiseta', tamanhos: ['Único'], estoque: 20 },
+    { id: 'camisa', nome: 'Camisas', forma: 'manga_longa', tamanhos: ['PP', 'P', 'M', 'G', 'GG'], estoque: 10 },
+    { id: 'moletom', nome: 'Moletons', forma: 'blusa', tamanhos: ['PP', 'P', 'M', 'G', 'GG'], estoque: 10 },
   ],
 
   // Ordem em que os tamanhos aparecem na loja e no admin (menor → maior).
